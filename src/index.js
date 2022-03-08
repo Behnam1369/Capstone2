@@ -1,4 +1,4 @@
-import './script.css';
+import './style.css';
 import Logo from './images/logo.jpg';
 
 const logo = document.querySelector('.logo');
