@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    font-family: sans-serif, arial, helvetica;
+}
+
+
+/* Mobile version */
+@media only screen and (max-width: 600px) {
+    /* Stylize head section */
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        height: 200vh;
+        background-image: url(https://matchthemes.com/demowp/caverta/wp-content/uploads/slider-3.jpg);
+        background-repeat:no-repeat;
+        background-size: contain;
+        padding-top: 15px;  
+    }
+    #header {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    /* Stylize menu */
+    .logo-container {
+        background-color: rgba(233, 218, 218, 0.068);
+    }
+
+    .menu {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-items {
+        text-decoration: none;
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .menu-items:hover {
+        font-size: 20px;
+        text-decoration: underline;
+        border-top: 1px solid #e55242;
+        border-bottom: 1px solid #fff;
+      }
+
+    .header-content {
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        padding: 4px;
+        background-color: rgba(155, 15, 15, 0.315);
+        margin-top: 40px;      
+    }
+}
+
+/* Tablet version */
+@media only screen and (min-width: 601px) {
+    /* Stylize head section */
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        height: 200vh;
+        background-image: url(https://matchthemes.com/demowp/caverta/wp-content/uploads/slider-3.jpg);
+        background-repeat:no-repeat;
+        background-size: contain;
+        padding-top: 15px;  
+    }
+    #header {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    /* Stylize menu */
+    .logo-container {
+        background-color: rgba(233, 218, 218, 0.068);
+    }
+
+    .menu {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-items {
+        text-decoration: none;
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .menu-items:hover {
+        font-size: 20px;
+        text-decoration: underline;
+        border-top: 1px solid #e55242;
+        border-bottom: 1px solid #fff;
+      }
+
+    .header-content {
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        padding: 4px;
+        background-color: rgba(155, 15, 15, 0.315);
+        margin-top: 100px;      
+    }
+}
+
+/* Desktop version */
+@media only screen and (min-width: 992px) {
+    /* Stylize head section */
+    main {
+       /*  display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        height: 200vh; */
+        background-image: url(https://matchthemes.com/demowp/caverta/wp-content/uploads/slider-3.jpg);
+        background-repeat:no-repeat;
+        background-size: contain;
+        padding-top: 35px;  
+    }
+    #header {
+        display: flex;
+        flex-direction: row;
+        gap: 300px;       
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Stylize menu */
+    .logo-container {
+        background-color: rgba(233, 218, 218, 0.068);
+    }
+
+    .menu {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-items {
+        text-decoration: none;
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .menu-items:hover {
+        font-size: 20px;
+        text-decoration: underline;
+        border-top: 1px solid #e55242;
+        border-bottom: 1px solid #fff;
+      }
+
+    .header-content {
+        color: #fff;
+        text-align: center;
+        font-size: 25px;
+        padding: 80px;
+        background-color: rgba(155, 15, 15, 0.315);
+        margin-top: 200px;      
+    }
+}

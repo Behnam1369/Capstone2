@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    static: './dist',
+    hot: false, liveReload: true 
   },
   entry: './src/index.js',
   plugins: [
