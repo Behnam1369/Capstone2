@@ -4,4 +4,3 @@ import './index.css';
 
 const logo = document.querySelector('.logo');
 logo.src = Logo;
-
