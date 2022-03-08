@@ -3,7 +3,7 @@ import Logo from './images/logo.jpg';
 import './index.css';
 import getMeals from './modules/meals.js';
 
-const logo = document.querySelector('.logo');
+const logo = document.querySelector('footer .logo');
 logo.src = Logo;
 
 async function loadMeals() {

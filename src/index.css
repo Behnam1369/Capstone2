@@ -1,11 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: sans-serif, arial, helvetica;
+  margin: 0;
+  padding: 0;
 }
 
 /* Mobile version */
