@@ -5,7 +5,8 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    hot: false, liveReload: true,
+    hot: false,
+    liveReload: true,
   },
   entry: './src/index.js',
   plugins: [
@@ -27,6 +28,10 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
     ],
