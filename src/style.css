@@ -53,7 +53,7 @@ body .popup img {
 }
 
 body .popup .user {
-  font-family: Volte;
+  font-family: Volte, sans-serif;
   background-color: #deff00;
   color: black;
   font-weight: bold;
@@ -71,22 +71,10 @@ body .popup .user span {
   margin-left: 30px;
 }
 
-body .popup .comment p {
-  background-color: #04044e;
-  padding: 40px 20px;
-  border: solid 1px #deff00;
-  color: #deff00;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  margin: 0;
-  left: 5px;
-}
-
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: box;
+  display: flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background-color: black;
   color: #a4b1b8;
@@ -125,4 +113,15 @@ footer div a {
 footer div:first-child {
   text-align: center;
   padding: 0 30px;
+}
+
+.comment p {
+  background-color: #04044e;
+  padding: 40px 20px;
+  border: solid 1px #deff00;
+  color: #deff00;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin: 0;
+  left: 5px;
 }
