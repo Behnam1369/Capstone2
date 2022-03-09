@@ -1,6 +1,8 @@
 import './style.css';
-import Logo from './images/logo.jpg';
+import Logo from './assets/logo.png';
 import './index.css';
+import getMeals from './modules/meals.js';
+import showPopup from './modules/comments.js';
 
 const logo = document.querySelector('footer .logo');
 logo.src = Logo;
@@ -8,9 +10,7 @@ logo.src = Logo;
 const displayList = document.querySelector('.display-list');
 
 async function loadMeals() {
-  const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?a=chinese');
-  const data = await response.json();
-
+  const data = await getMeals();
   const theMeals = data.meals;
 
   for (let i = 0; i < theMeals.length; i++) {
@@ -27,6 +27,11 @@ async function loadMeals() {
             <a class="reserve" href="">Reservation</a>
         </p>
         `;
+    const btnComment = divItem.querySelector('.comment');
+    btnComment.addEventListener('click', (e) => {
+      e.preventDefault();
+      showPopup(theMeals[i].idMeal);
+    });
     displayList.appendChild(divItem);
   }
 }
