@@ -7,9 +7,8 @@ logo.src = Logo;
 
 const displayList = document.querySelector('.display-list');
 
-
 async function loadMeals() {
-  const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?a=chinese')
+  const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?a=chinese');
   const data = await response.json();
 
   const theMeals = data.meals;
@@ -35,4 +34,3 @@ async function loadMeals() {
 window.addEventListener('load', () => {
   loadMeals();
 });
-
