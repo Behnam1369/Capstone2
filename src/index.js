@@ -2,7 +2,6 @@ import './style.css';
 import Logo from './assets/logo.png';
 import './index.css';
 import getMeals from './modules/meals.js';
-import getComments from './modules/comments.js';
 import showPopup from './modules/comments.js';
 
 const logo = document.querySelector('footer .logo');
