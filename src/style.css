@@ -8,6 +8,48 @@ body {
   margin: 0;
 }
 
+body footer {
+  display: flex;
+  flex-flow: wrap;
+  background-color: black;
+  color: #a4b1b8;
+  font-family: Volte, sans-serif;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 30px;
+  gap: 10px;
+}
+
+body footer div {
+  -ms-flex-preferred-size: 300px;
+  flex-basis: 300px;
+}
+
+body footer div h2 {
+  font-weight: bold;
+  font-size: 28px;
+  border-bottom: solid 2px #a4b1b8;
+  display: inline-block;
+}
+
+body footer div p {
+  font-size: 20px;
+  color: white;
+}
+
+body footer div a {
+  color: white;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+body footer div:first-child {
+  text-align: center;
+  padding: 0 30px;
+}
+
 body .popup-container {
   position: fixed;
   top: 0;
@@ -27,25 +69,34 @@ body .popup {
   width: 65%;
   max-width: 650px;
   margin: auto;
+  display: box;
+  display: flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  flex-flow: row wrap;
   -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
   border-radius: 10px;
   -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   margin-bottom: 50px;
   padding: 20px;
+  padding-top: 0;
 }
 
 body .popup .close-button {
   background-image: url("./assets/closeButton.png");
-  width: 14px;
-  height: 14px;
+  width: 50px;
+  height: 50px;
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
   margin-left: auto;
+  margin-bottom: 2px;
 }
 
 body .popup img {
@@ -71,51 +122,7 @@ body .popup .user span {
   margin-left: 30px;
 }
 
-footer {
-  display: box;
-  display: flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: black;
-  color: #a4b1b8;
-  font-family: Volte, sans-serif;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  padding: 30px;
-  gap: 10px;
-}
-
-footer div {
-  -ms-flex-preferred-size: 300px;
-  flex-basis: 300px;
-}
-
-footer div h2 {
-  font-weight: bold;
-  font-size: 28px;
-  border-bottom: solid 2px #a4b1b8;
-  display: inline-block;
-}
-
-footer div p {
-  font-size: 20px;
-  color: white;
-}
-
-footer div a {
-  color: white;
-  display: block;
-  font-size: 20px;
-  text-decoration: none;
-  margin: 10px;
-}
-
-footer div:first-child {
-  text-align: center;
-  padding: 0 30px;
-}
-
-.comment p {
+body .popup .comment p {
   background-color: #04044e;
   padding: 40px 20px;
   border: solid 1px #deff00;

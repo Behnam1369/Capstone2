@@ -60,8 +60,6 @@ const showPopup = async (idmeal) => {
     </div>`)}</div>
   `;
   popup.appendChild(commentsDiv);
-  console.log(mealDetail);
-  console.log(comments);
 };
 
 export default showPopup;
