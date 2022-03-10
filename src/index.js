@@ -3,7 +3,7 @@ import Logo from './assets/logo.png';
 import './index.css';
 import getMeals from './modules/meals.js';
 import showPopup from './modules/comments.js';
-import { getLikes, addLikes } from './modules/like.js';
+import { getLikes } from './modules/like.js';
 
 const logo = document.querySelector('footer .logo');
 logo.src = Logo;
@@ -47,7 +47,6 @@ async function loadMeals() {
       `;
     }
   });
-  
 }
 
 window.addEventListener('load', () => {
