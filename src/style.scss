@@ -82,6 +82,21 @@ body {
       margin: 20px 0 20px 20px;
     }
 
+    .tags {
+      padding-top: 10px;
+      .tag{
+        display: inline-block;
+        padding:5px;
+        background-color: whitesmoke;
+        color: black;
+        border-radius: 5px;
+        font-family: Volte , sans-serif;
+        font-weight: bold;
+        margin-right: 6px;
+
+      }
+    }
+
     .close-button {
       background-image: url("./assets/closeButton.png");
       width: 50px;
