@@ -75,6 +75,12 @@ body {
     padding: 20px;
     padding-top: 0;
 
+    .instruction {
+      font-family: Volte, sans-serif;
+      font-size: 20px;
+      margin-left: 25px;
+    }
+
     .close-button {
       background-image: url("./assets/closeButton.png");
       width: 50px;
@@ -111,7 +117,7 @@ body {
     }
 
     .comment p {
-      background-color: #04044e;
+      background-color: #ffffff14;
       padding: 40px 20px;
       border: solid 1px #deff00;
       color: #deff00;
@@ -119,6 +125,7 @@ body {
       border-bottom-left-radius: 20px;
       margin: 0;
       left: 5px;
+      margin-left: 25px;
     }
   }
 }

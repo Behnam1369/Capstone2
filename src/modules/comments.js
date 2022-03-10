@@ -44,7 +44,7 @@ const showPopup = async (idmeal) => {
   const infoDiv = document.createElement('div');
   infoDiv.innerHTML = `
   <h2>${mealDetail.meals[0].strMeal}</h2>
-  <p>${mealDetail.meals[0].strInstructions}</p>
+  ${mealDetail.meals[0].strInstructions.split(/STEP [0-9] -/).map((el, i) => (i > 0 ? `<p class='instruction'>${i} - ${el}</p>` : '')).join('')}
   <div class="tags">${(mealDetail.meals[0].strTags || '').split(',').map((el) => `<div class='tag'>${el}</div>`)}</div>
   `;
 
@@ -60,8 +60,6 @@ const showPopup = async (idmeal) => {
     </div>`)}</div>
   `;
   popup.appendChild(commentsDiv);
-  /* console.log(mealDetail);
-  console.log(comments); */
 };
 
 export default showPopup;
