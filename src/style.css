@@ -9,8 +9,10 @@ body {
 }
 
 body footer {
+  display: box;
+  display: flexbox;
   display: flex;
-  flex-flow: wrap;
+  flex-wrap: wrap;
   background-color: black;
   color: #a4b1b8;
   font-family: Volte, sans-serif;
@@ -87,6 +89,12 @@ body .popup {
   padding-top: 0;
 }
 
+body .popup .instruction {
+  font-family: Volte, sans-serif;
+  font-size: 20px;
+  margin-left: 25px;
+}
+
 body .popup .close-button {
   background-image: url("./assets/closeButton.png");
   width: 50px;
@@ -123,7 +131,7 @@ body .popup .user span {
 }
 
 body .popup .comment p {
-  background-color: #04044e;
+  background-color: #ffffff14;
   padding: 40px 20px;
   border: solid 1px #deff00;
   color: #deff00;
@@ -131,4 +139,5 @@ body .popup .comment p {
   border-bottom-left-radius: 20px;
   margin: 0;
   left: 5px;
+  margin-left: 25px;
 }
