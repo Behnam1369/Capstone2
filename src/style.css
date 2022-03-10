@@ -130,6 +130,55 @@ body .popup .user span {
   margin-left: 30px;
 }
 
+footer {
+  margin-top: 15px;
+  display: box;
+  display: flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  color: #a4b1b8;
+  font-family: Volte, sans-serif;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 30px;
+  gap: 10px;
+}
+
+footer div {
+  -ms-flex-preferred-size: 300px;
+  flex-basis: 300px;
+}
+
+footer div h2 {
+  font-weight: bold;
+  font-size: 28px;
+  border-bottom: solid 2px #a4b1b8;
+  display: inline-block;
+}
+
+footer div p {
+  font-size: 20px;
+  color: white;
+}
+
+footer div a {
+  color: white;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+footer div:first-child {
+  text-align: center;
+  padding: 0 30px;
+}
+
+.comment p {
+  background-color: #04044e;
+}
+
 body .popup .comment p {
   background-color: #ffffff14;
   padding: 40px 20px;

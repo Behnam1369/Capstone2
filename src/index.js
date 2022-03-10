@@ -3,6 +3,7 @@ import Logo from './assets/logo.png';
 import './index.css';
 import getMeals from './modules/meals.js';
 import showPopup from './modules/comments.js';
+import { getLikes } from './modules/like.js';
 
 const logo = document.querySelector('footer .logo');
 logo.src = Logo;
@@ -20,7 +21,10 @@ async function loadMeals() {
         <img src="${theMeals[i].strMealThumb}" alt="">
         <div class="flex-container">
             <h1 class="title">${theMeals[i].strMeal}</h1>
-            <p class="likes"><span class="heart">&#10084;</span> 5 likes</p>
+            <div class="likes-div">
+              <button class="icon" type="button" title="Press to like this food">&#10084;</button>
+              <p class="likes" id="${theMeals[i].idMeal}"></p>Likes
+            </div>            
         </div>
         <p class="item-data">
             <a class="comment" href="">Comment</a>
@@ -34,6 +38,15 @@ async function loadMeals() {
     });
     displayList.appendChild(divItem);
   }
+
+  getLikes().then((response) => {
+    const likes = document.querySelectorAll('.likes');
+    for (let i = 0; i < response.length; i++) {
+      likes[i].textContent = `
+        ${response[i].likes}
+      `;
+    }
+  });
 }
 
 window.addEventListener('load', () => {
