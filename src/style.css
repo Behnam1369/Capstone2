@@ -72,6 +72,7 @@ body .popup .user span {
 }
 
 footer {
+  margin-top: 15px;
   display: box;
   display: flexbox;
   display: flex;
