@@ -1,5 +1,6 @@
+const appid = 'tLVd7tb0BQpHYLFSGTqK';
+
 const getComments = (idmeal) => {
-  const appid = 'tLVd7tb0BQpHYLFSGTqK';
   const result = fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appid}/comments?item_id=${idmeal}`)
     .then((response) => response.json())
     .then((result) => result)
@@ -16,6 +17,81 @@ const getMealDetail = (idmeal) => {
 };
 
 const showPopup = async (idmeal) => {
+  const commentsDiv = document.createElement('div');
+  commentsDiv.style.width = '100%';
+  let comments = '';
+  const txtUser = document.createElement('input');
+  txtUser.classList.add('txtUser');
+  txtUser.placeholder = 'Your name ';
+  const txtComment = document.createElement('textarea');
+  txtComment.classList.add('txtComment');
+  txtComment.placeholder = 'Your comment';
+  const btnSubmitComment = document.createElement('button');
+  btnSubmitComment.innerHTML = 'Submit your comment';
+  const message = document.createElement('p');
+  message.classList.add('message');
+
+  const showComments = () => {
+    let res = '';
+    if (comments.length > 0) {
+      res = `
+  <h2>Comments</h2>
+  <div class="comments">${comments.map((el) => `<div class='comment'>
+      <div class="user"> ${el.username} <span>${el.creation_date}</span> </div>
+      <p>${el.comment}</p>
+    </div>`).join('')}</div>
+  `;
+    }
+    return res;
+  };
+
+  const submitComment = (idmeal) => {
+    if (txtUser.value === '') {
+      message.innerHTML = '';
+      setTimeout(() => {
+        message.classList.add('failed');
+        message.innerHTML = 'Please enter you name';
+      }, 100);
+      return false;
+    } if (txtComment.value === '') {
+      message.innerHTML = '';
+      setTimeout(() => {
+        message.classList.add('failed');
+        message.innerHTML = 'Please enter you comment';
+      }, 100);
+      return false;
+    }
+
+    const data = JSON.stringify({
+      item_id: idmeal,
+      username: txtUser.value,
+      comment: txtComment.value,
+    });
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    message.innerHTML = '';
+    fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appid}/comments`, requestOptions)
+      .then((response) => response.text())
+      .then(async (result) => {
+        if (result === 'Created') {
+          message.classList.add('success');
+          message.innerHTML = 'Your comment saved suseccfully.';
+          comments = await getComments(idmeal);
+          commentsDiv.innerHTML = showComments();
+        } else {
+          message.classList.add('failed');
+          message.innerHTML = 'An error accured. Please try again later';
+        }
+      });
+
+    return null;
+  };
+
   const popupContainer = document.createElement('div');
   popupContainer.classList.add('popup-container');
 
@@ -28,6 +104,7 @@ const showPopup = async (idmeal) => {
   closeButton.classList.add('close-button');
   closeButton.addEventListener('click', () => {
     popupContainer.remove();
+    btnSubmitComment.removeEventListener('click', () => submitComment(idmeal));
     document.querySelector('html').style.overflow = 'auto';
   });
   popup.appendChild(closeButton);
@@ -47,19 +124,21 @@ const showPopup = async (idmeal) => {
   ${mealDetail.meals[0].strInstructions.split(/STEP [0-9] -/).map((el, i) => (i > 0 ? `<p class='instruction'>${i} - ${el}</p>` : '')).join('')}
   <div class="tags">${(mealDetail.meals[0].strTags || '').split(',').map((el) => `<div class='tag'>${el}</div>`)}</div>
   `;
-
   popup.appendChild(infoDiv);
-  const comments = await getComments(idmeal);
-  const commentsDiv = document.createElement('div');
-  commentsDiv.style.width = '100%';
-  commentsDiv.innerHTML = `
-  <h3>Comments</h3>
-  <div class="comments">${comments.map((el) => `<div class='comment'>
-      <div class="user"> ${el.username} <span>${el.creation_date}</span> </div>
-      <p>${el.comment}</p>
-    </div>`)}</div>
-  `;
+
+  comments = await getComments(idmeal);
+  commentsDiv.innerHTML = showComments();
+
   popup.appendChild(commentsDiv);
+
+  const submitCommentTitle = document.createElement('h2');
+  submitCommentTitle.innerHTML = 'Add your comment';
+  popup.append(submitCommentTitle);
+  popup.appendChild(txtUser);
+  popup.appendChild(txtComment);
+  popup.appendChild(btnSubmitComment);
+  btnSubmitComment.addEventListener('click', () => submitComment(idmeal));
+  popup.appendChild(message);
 };
 
 export default showPopup;
