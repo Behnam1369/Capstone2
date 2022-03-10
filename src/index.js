@@ -3,7 +3,7 @@ import Logo from './assets/logo.png';
 import './index.css';
 import getMeals from './modules/meals.js';
 import showPopup from './modules/comments.js';
-import { getLikes } from './modules/like.js';
+import { getLikes, addLikes } from './modules/like.js';
 
 const logo = document.querySelector('footer .logo');
 logo.src = Logo;
@@ -46,6 +46,15 @@ async function loadMeals() {
         ${response[i].likes}
       `;
     }
+  });
+
+  const icons = document.querySelectorAll('.icon');
+  icons.forEach((icon) => {
+    icon.addEventListener('click', (e) => {
+      addLikes(e);
+      const numOfLikes = e.target.parentNode.children[1];
+      numOfLikes.textContent = +numOfLikes.textContent + 1;
+    });
   });
 }
 
