@@ -9,23 +9,22 @@ body {
 }
 
 body footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: box;
+  display: flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   background-color: black;
   color: #a4b1b8;
   font-family: Volte, sans-serif;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding: 30px;
   gap: 10px;
 }
 
 body footer div {
   -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
+  flex-basis: 300px;
 }
 
 body footer div h2 {
@@ -62,8 +61,7 @@ body .popup-container {
   padding-top: 2%;
   padding-bottom: 2%;
   background-color: #c0c0c0b2;
-  -webkit-backdrop-filter: saturate(180%) blur(4px);
-          backdrop-filter: saturate(180%) blur(4px);
+  backdrop-filter: saturate(180%) blur(4px);
   overflow: auto;
 }
 
@@ -73,21 +71,20 @@ body .popup {
   width: 65%;
   max-width: 650px;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: box;
+  display: flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 30px;
   -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
   border-radius: 10px;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   margin-bottom: 50px;
   padding: 20px;
   padding-top: 0;
@@ -201,4 +198,3 @@ body .popup .message.success {
 body .popup .message.failed {
   color: red;
 }
-/*# sourceMappingURL=style.css.map */
