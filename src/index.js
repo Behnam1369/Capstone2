@@ -4,6 +4,7 @@ import './index.css';
 import getMeals from './modules/meals.js';
 import showPopup from './modules/comments.js';
 import { getLikes, addLikes } from './modules/like.js';
+import counter from './modules/itemCounter.js';
 
 const logo = document.querySelector('footer .logo');
 logo.src = Logo;
@@ -55,6 +56,14 @@ async function loadMeals() {
       const numOfLikes = e.target.parentNode.children[1];
       numOfLikes.textContent = +numOfLikes.textContent + 1;
     });
+  });
+
+  counter().then(() => {
+    const counter = theMeals.length;
+    const countHeader = document.querySelector('.list-item-title2');
+    countHeader.textContent = `
+    Discover our ${counter} meals available on the menu
+    `;
   });
 }
 

@@ -78,6 +78,10 @@ body {
   color: white;
 }
 
+.active {
+  color: rgb(238 25 25) !important;
+}
+
 /* Mobile version */
 @media only screen and (max-width: 600px) {
   /* Stylize head section */
