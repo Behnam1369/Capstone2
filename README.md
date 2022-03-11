@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # The Meal DB
-The Meal DB web application displays a list of meals that provided by an external API (`https://www.themealdb.com/api/json/v1/1/filter.php?a=chinese`). The users can like a meal, leave some comments or make a reservation, in these cases an involvement API will be used.
+The Meal DB web application displays a list of meals that provided by an external API (https://www.themealdb.com/api/json/v1/1/filter.php?a=chinese). The users can like a meal, leave some comments or make a reservation, in these cases an involvement API will be used.
 
 N.B. The reservation functions are not implemented because we were two.
 
