@@ -102,7 +102,6 @@ Please give a ⭐️ if you like this project!
 
 - Hat tip to anyone contributed one way or the other.
 - Inspiration
-- etc
 
 ## License
 
