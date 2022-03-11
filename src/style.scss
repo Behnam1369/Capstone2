@@ -16,6 +16,7 @@ body {
     justify-content: space-around;
     padding: 30px;
     gap: 10px;
+    margin-top: 20px;
 
     div {
       flex-basis: 300px;
@@ -44,6 +45,20 @@ body {
     div:first-child {
       text-align: center;
       padding: 0 30px;
+    }
+  }
+
+  .authors {
+    padding: 10px;
+    text-align: center;
+    font-family: Volte, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #ddd;
+
+    a {
+      color: orangered;
+      font-size: 24px;
     }
   }
 
@@ -198,6 +213,17 @@ body {
 
     .message.failed {
       color: red;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .popup-container {
+      padding: 0;
+
+      .popup {
+        width: 100%;
+        border-radius: 0;
+      }
     }
   }
 }
