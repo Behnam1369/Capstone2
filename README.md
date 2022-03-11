@@ -21,6 +21,8 @@ Please find project requirements [here](https://github.com/microverseinc/curricu
 
 Please take a look at the video below
 
+https://user-images.githubusercontent.com/88809610/157913162-ce2e6c92-0fe0-4582-951f-59f81f2703f6.mp4
+
 
 ## How it works
 
