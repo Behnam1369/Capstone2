@@ -6,6 +6,11 @@ The Meal DB web application displays a list of meals that provided by an externa
 N.B. The reservation functions are not implemented because we were two.
 
 ## Screenshot
+![Screenshot from 2022-03-10 21-58-21](https://user-images.githubusercontent.com/88809610/157794357-bf25c921-3ed3-4b3d-b94b-72b9f19fc528.png)
+
+
+
+![Screenshot from 2022-03-10 22-00-05](https://user-images.githubusercontent.com/88809610/157794157-066ad559-4b12-43fe-b556-f36abdb8aafa.png)
 
 
 
@@ -49,7 +54,7 @@ In order to install a local version of this project and please do the following 
 - Install the latest version of any code editor.
 - install the latest version of GIT.
 - open your terminal
-- Go to the [repository](https://github.com/Behnam1369/Capstone2)  and clone it with `git clone git@github.com:Behnam1369/Capstone2.git` .
+- Go to the [repository](https://github.com/Behnam1369/Capstone2)  and clone it with `git clone git@github.com:Behnam1369/Capstone2.git' .
 - open the repository cloned with `cd Capstone2`
 - if your code editor is VsCode type `code .`
 - Install webpack with: `npm install --save-dev webpack webpack-cli`
@@ -64,9 +69,9 @@ In order to install a local version of this project and please do the following 
 - JAVASCRIPT
 - Webpack
 - GitHub
--VsCode
--nodejs
--GIT
+- VsCode
+- nodejs
+- GIT
 
 ## Authors
 
