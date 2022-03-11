@@ -50,6 +50,7 @@ const showPopup = async (idmeal) => {
     if (txtUser.value === '') {
       message.innerHTML = '';
       setTimeout(() => {
+        message.classList.remove('success');
         message.classList.add('failed');
         message.innerHTML = 'Please enter you name';
       }, 100);
@@ -57,6 +58,7 @@ const showPopup = async (idmeal) => {
     } if (txtComment.value === '') {
       message.innerHTML = '';
       setTimeout(() => {
+        message.classList.remove('success');
         message.classList.add('failed');
         message.innerHTML = 'Please enter you comment';
       }, 100);
@@ -82,11 +84,13 @@ const showPopup = async (idmeal) => {
       .then((response) => response.text())
       .then(async (result) => {
         if (result === 'Created') {
+          message.classList.remove('failed');
           message.classList.add('success');
           message.innerHTML = 'Your comment was saved suseccfully.';
           comments = await getComments(idmeal);
           commentsDiv.innerHTML = showComments();
         } else {
+          message.classList.remove('success');
           message.classList.add('failed');
           message.innerHTML = 'An error accured. Please try again later';
         }
