@@ -9,5 +9,5 @@
     "selector-id-pattern": null,
     "no-descending-specificity": null
   },
-  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css", "**/*.js", "**/*.jsx"]
+  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css", "**/*.js", "**/*.jsx", "coverage/**"]
 }
