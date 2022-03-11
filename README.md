@@ -25,9 +25,9 @@ Please take a look at the video below
 ## How it works
 
 The Meal DB web application allows users to like, comment, and make a reservation for their favorite meal.
-* By clicking on 'like button' the number of like is increased and stored in the involvement API;
-* By clicking on the 'Comment button' to display the description of the selected meal, the list of all comments, and added a new comment;
-* By clicking on the 'Reservation button' to display the list of all reservations and make a new Reservation;
+* By clicking on `like button` the number of like is increased and stored in the involvement API;
+* By clicking on the `Comment button` to display the description of the selected meal, the list of all comments, and added a new comment;
+* By clicking on the `Reservation button` to display the list of all reservations and make a new Reservation;
 
 
 
