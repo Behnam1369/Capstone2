@@ -12,9 +12,9 @@ Please find project requirements [here](https://github.com/microverseinc/curricu
 ![Screenshot from 2022-03-10 21-58-21](https://user-images.githubusercontent.com/88809610/157794357-bf25c921-3ed3-4b3d-b94b-72b9f19fc528.png)
 
 
-
 ![Screenshot from 2022-03-10 22-00-05](https://user-images.githubusercontent.com/88809610/157794157-066ad559-4b12-43fe-b556-f36abdb8aafa.png)
 
+![Screenshot from 2022-03-11 10-57-28](https://user-images.githubusercontent.com/88809610/157902931-c2f4570b-b98e-4f99-9a49-ec078688b82e.png)
 
 
 ## Project presentation
