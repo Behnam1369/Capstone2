@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1647004189399" clover="3.2.0">
-  <project timestamp="1647004189400" name="All files">
+<coverage generated="1647014234324" clover="3.2.0">
+  <project timestamp="1647014234324" name="All files">
     <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2" elements="12" coveredelements="12" complexity="0" loc="6" ncloc="6" packages="1" files="2" classes="2"/>
-    <file name="commentCount.js" path="C:\Users\b.aghaali\Desktop\Microverse\Capstone2\src\modules\commentCount.js">
+    <file name="commentCount.js" path="/home/hemerson/MICROVERSE_FULLTIME_STUDENT/Capstone2/src/modules/commentCount.js">
       <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <line num="1" count="3" type="cond" truecount="4" falsecount="0"/>
     </file>
-    <file name="itemCounter.js" path="C:\Users\b.aghaali\Desktop\Microverse\Capstone2\src\modules\itemCounter.js">
+    <file name="itemCounter.js" path="/home/hemerson/MICROVERSE_FULLTIME_STUDENT/Capstone2/src/modules/itemCounter.js">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>

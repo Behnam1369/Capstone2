@@ -1,5 +1,5 @@
 TN:
-SF:src\modules\commentCount.js
+SF:src/modules/commentCount.js
 FN:1,(anonymous_0)
 FNF:1
 FNH:1
@@ -15,7 +15,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:src\modules\itemCounter.js
+SF:src/modules/itemCounter.js
 FN:2,(anonymous_0)
 FNF:1
 FNH:1
